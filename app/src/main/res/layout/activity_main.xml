@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:jack="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="center"
+    tools:context="com.hunter.demo.MainActivity">
+
+    <com.hunter.roundimageview.RoundImageView
+        android:id="@+id/r1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="center"
+        android:src="@drawable/img"
+        app:borderWidth="1dp"
+        app:displayBorder="true"
+        app:displayType="normal" />
+
+    <com.hunter.roundimageview.RoundImageView
+        android:id="@+id/r2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@id/r1"
+        android:layout_toRightOf="@id/r1"
+        android:radius="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/move"
+        app:borderWidth="0dp"
+        app:displayBorder="true"
+        app:displayType="round_rect" />
+
+    <com.hunter.roundimageview.RoundImageView
+        android:id="@+id/r3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r1"
+        android:layout_marginTop="15dp"
+        android:scaleType="center"
+        android:src="@drawable/img"
+        app:borderWidth="1dp"
+        app:displayBorder="true"
+        app:displayType="circle" />
+
+    <com.hunter.roundimageview.RoundImageView
+        android:id="@+id/r4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/r2"
+        android:layout_alignStart="@id/r2"
+        android:layout_alignLeft="@id/r2"
+        android:layout_marginTop="15dp"
+        android:bottomLeftRadius="30dp"
+        android:bottomRightRadius="20dp"
+        android:scaleType="center"
+        android:src="@drawable/img"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="15dp"
+        app:borderColor="#ff0000"
+        app:borderWidth="3dp"
+        app:displayBorder="true"
+        app:displayType="round_rect" />
+
+    <com.hunter.roundimageview.RoundImageView
+        android:id="@+id/r5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/r3"
+        android:layout_marginTop="15dp"
+        android:scaleType="center"
+        android:src="@drawable/img"
+        android:text="标签文本标签文本标签文本"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:borderWidth="1dp"
+        app:displayBorder="true"
+        app:displayLabel="true"
+        app:displayType="normal"
+        app:labelBackground="@color/colorAccent"
+        app:labelGravity="rightTop"
+        app:labelWidth="20dp"
+        app:startMargin="30dp" />
+
+    <com.hunter.roundimageview.RoundImageView
+        android:id="@+id/r6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/r4"
+        android:layout_alignStart="@id/r4"
+        android:layout_alignLeft="@id/r4"
+        android:layout_marginTop="15dp"
+        android:endColor="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:scaleType="center"
+        android:src="@drawable/img"
+        android:startColor="@color/colorAccent"
+        android:type="linear"
+        app:borderWidth="5dp"
+        app:displayBorder="true"
+        app:displayType="circle"
+        app:gradientContent="border" />
+
+    <!--原型图-->
+    <com.hunter.demo.view.CustomImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        jack:borderRadius="10dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/r5"
+        jack:src="@drawable/move"
+        jack:type="round"/>
+
+</RelativeLayout>
